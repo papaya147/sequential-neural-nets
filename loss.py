@@ -30,7 +30,8 @@ class MeanAbsoluteError(LossFunction):
             case y - y' < 0: -1 / n
             case y - y' = 0: 0
         """
-        return np.sign(pred - target) / pred.size
+        batch_size = pred.shape[0]
+        return np.sign(pred - target) / batch_size
     
 class MeanSquareError(LossFunction):
     def loss(self, pred, target):
@@ -43,7 +44,24 @@ class MeanSquareError(LossFunction):
         """
         f(y, y') = 2(y - y') / n
         """
-        return (2 * (pred - target)) / pred.size
+        batch_size = pred.shape[0]
+        return (2 * (pred - target)) / batch_size
+    
+
+class RootMeanSquareError(LossFunction):
+    def loss(self, pred, target):
+        """
+        f(y, y') = ((y - y')^2 / n)^0.5
+        """
+        return np.sqrt(np.mean((pred - target) ** 2))
+    
+    def derivative(self, pred, target):
+        """
+        f(y, y') = (y - y') / (n * f)
+        """
+        batch_size = pred.shape[0]
+        rmse = self.loss(pred, target)
+        return (pred - target) / batch_size / rmse
     
 
 class SparseCategoricalCrossentropy(LossFunction):
