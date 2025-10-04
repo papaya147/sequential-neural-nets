@@ -41,3 +41,7 @@ conda activate ./env
 pip install -r requirements.txt
 ```
 Set the Python environment in the notebooks to run them now!
+
+### Prerequisites
+- Conda (recommended for environment management)
+- Dependencies in `requirements.txt`
