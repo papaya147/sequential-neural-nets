@@ -5,7 +5,7 @@ A lightweight implementation of sequential neural networks from scratch in Pytho
 
 ## Overview
 
-This repository provides a simple, modular implementation of sequential dense neural networks built from the ground up. It supports common machine learning tasks such as regression and classification, with example use cases in the `notebooks/` directory.
+This repository provides a simple, modular implementation of sequential dense neural networks built from the ground up. It supports common machine learning tasks such as regression and classification, with example use cases in the [`notebooks/`](https://github.com/papaya147/sequential-neural-nets/tree/main/notebooks) directory.
 
 ## Features
 
