@@ -9,8 +9,8 @@ This repository provides a simple, modular implementation of sequential dense ne
 
 ## Features
 
-- **Layers**: Dense (fully connected) layers.
-- **Optimizers**: Stochastic Gradient Descent (SGD).
+- **Layers**: Dense (fully connected) layers
+- **Optimizers**: Stochastic Gradient Descent (SGD)
 - **Activation Functions**:
   - Linear
   - ReLU
